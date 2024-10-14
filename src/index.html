@@ -4,14 +4,357 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap w/ Vite</title>
+  <title>Wahana Travel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
-<body>
-  <div class="container py-4 px-3 mx-auto">
-    <h1>Hello, Bootstrap and Vite!</h1>
-    <button class="btn btn-primary">Primary button</button>
-  </div>
+<body class="bg-light">
+  <!-- Header -->
+  <header
+    class="container-fluid bg-tertiary d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 gap-sm-0 py-2 px-4">
+    <div class="d-flex gap-2 align-items-center bg-white font-cursive fw-bold p-2">
+      <p class="text-primary">
+        DREAM -
+      </p>
+      <p class="text-info">
+        EXPLORE -
+      </p>
+      <p class="text-success">
+        DISCOVER
+      </p>
+    </div>
+
+    <div class="d-flex gap-4 align-items-center">
+      <div class="dropdown">
+        <div class="d-flex gap-1 align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./assets/uk.png" alt="uk" class="img-fluid rounded-circle" style="height: 2rem;">
+          <p class="text-black fw-medium">EN</p>
+        </div>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">EN</a></li>
+          <li><a class="dropdown-item" href="#">ID</a></li>
+        </ul>
+      </div>
+
+      <button class="btn btn-primary">
+        Register/Login
+      </button>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="./assets/logo.svg">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav fw-medium">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Promotion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">flight</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hotel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tour</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cars Rental</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">M.I.C.E</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Travel Docs
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Docs 1</a></li>
+              <li><a class="dropdown-item" href="#">Docs 2</a></li>
+              <li><a class="dropdown-item" href="#">Docs 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Career</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sponsor Section -->
+  <section class="container-fluid bg-danger p-4" id="sponsor">
+    <div class="row overflow-x-auto">
+      <img src="https://picsum.photos/320/150" alt="img-placeholder" class="col-6 col-sm-3 py-2 py-sm-0 px-sm-1">
+      <img src="https://picsum.photos/320/150" alt="img-placeholder" class="col-6 col-sm-3 py-2 py-sm-0 px-sm-1">
+      <img src="https://picsum.photos/320/150" alt="img-placeholder" class="col-6 col-sm-3 py-2 py-sm-0 px-sm-1">
+      <img src="https://picsum.photos/320/150" alt="img-placeholder" class="col-6 col-sm-3 py-2 py-sm-0 px-sm-1">
+    </div>
+  </section>
+
+  <!-- Invoice Section -->
+  <section id="invoice">
+    <!-- Steps -->
+    <div class="container w-100 w-md-75 w-lg-65 px-3 px-md-0 mx-auto my-4">
+      <div class="row gap-2 gap-md-1 align-items-center">
+
+        <div class="col-4 col-md-3 d-flex align-items-center gap-2">
+          <i class="fa-regular fa-calendar fs-6 fs-md-4 p-2 p-md-3 bg-secondary-subtle rounded-circle"></i>
+          <p class="text-black fs-6 fs-md-5 fw-medium fw-md-bold">BOOKING</p>
+        </div>
+        <div class="col-7 col-md-5 col-lg-4 d-flex align-items-center gap-2">
+          <i class="fa-regular fa-credit-card fs-6 fs-md-4 p-2 p-md-3 bg-secondary-subtle rounded-circle"></i>
+          <p class="text-black fs-6 fs-md-5 fw-medium fw-md-bold">PAYMENT METHOD</p>
+        </div>
+        <div class="col-4 col-md-3 d-flex align-items-center gap-2">
+          <i class="fa-regular fa-square-check text-white fs-6 fs-md-4 p-2 p-md-3 bg-danger rounded-circle"></i>
+          <p class="text-black fs-6 fs-md-5 fw-medium fw-md-bold">COMPLETED</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Card -->
+    <div class="container w-100 w-md-75 w-lg-65 bg-white rounded shadow-sm d-flex flex-column justify-content-center">
+      <img src="./assets/payment.svg" alt="payment" class="img-fluid w-25 h-25 mx-auto">
+      <h3 class="text-center fw-bold">Payment Successful</h3>
+      <hr class="w-75 mx-auto">
+      <div class="row p-4 pt-0 align-items-center">
+        <div class="col-md-6">
+          <p class="text-decoration-underline mb-1 text-primary fw-medium">Order detail</p>
+          <div class="card w-100 bg-secondary-subtle border-0 p-4 mb-4 shadow-sm">
+            <div class="d-flex justify-content-between">
+              <p class="fw-medium text-black">Booking flight CGK-SIN</p>
+              <p class="fw-medium text-black">1 Qty</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Subtotal (include tax)</p>
+              <p class="fw-medium text-black">IDR 3.336.600</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Service Fee</p>
+              <p class="fw-medium text-black">IDR 10.000</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Voucher Discount</p>
+              <p class="fw-medium text-black">-</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Other Fee</p>
+              <p class="fw-medium text-black">-</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Order Total</p>
+              <p class="fw-medium text-black">IDR 3.389.966</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="d-flex gap-1 align-items-center">
+                <i class="fa-solid fa-coins text-warning"></i>
+                <p class="text-black">Poin yang didapatkan</p>
+              </div>
+              <p class="fw-medium text-black">48000</p>
+            </div>
+            <div class="accordion" id="invoiceAccordion">
+              <div class="accordion-item">
+                <p class="accordion-header" id="headingOne">
+                  <button class="accordion-button p-0 bg-secondary-subtle collapsed" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Invoice Detail
+                  </button>
+                </p>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionSingle">
+                  <div class="accordion-body p-2">
+                    <div class="d-flex justify-content-between py-1">
+                      <p class="text-black">Payment Method</p>
+                      <p class="fw-medium text-black">Payment Gateway Service</p>
+                    </div>
+                    <div class="d-flex justify-content-between py-1">
+                      <p class="text-black">Merchant</p>
+                      <p class="fw-medium text-black">BCA Credit Card</p>
+                    </div>
+                    <div class="d-flex justify-content-between py-1">
+                      <p class="text-black">Payment Date</p>
+                      <p class="fw-medium text-black">Fri, 25 May 2023 09:17 AM</p>
+                    </div>
+                    <div class="d-flex justify-content-between py-1">
+                      <p class="text-black">Reference</p>
+                      <p class="fw-medium text-black">A-6966</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <p class="text-decoration-underline text-primary fw-medium">Download Invoice</p>
+            </div>
+          </div>
+
+          <div class="card w-100 bg-secondary-subtle border-0 p-4 mt-4 shadow-sm">
+            <p class="fw-medium text-primary">Wahana Travel - Booking Flight</p>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Order ID :</p>
+              <p class="fw-medium text-black">1122409400</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Booking Code :</p>
+              <p class="fw-medium text-black">QA12611249DGA</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Customer :</p>
+              <p class="fw-medium text-black">Raka Ardiansyah</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Phone No :</p>
+              <p class="fw-medium text-black">087123127132</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Email :</p>
+              <p class="fw-medium text-black">rakaardiansyah@gmail.com</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-black">Submit Date :</p>
+              <p class="fw-medium text-black">Fri, 28 May 2021 09:12 AM</p>
+            </div>
+            <div class="d-flex justify-content-end mt-2">
+              <p class="text-decoration-underline text-primary fw-medium">Download Ticket</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h1 class="text-decoration-underline mb-1 text-primary text-center fw-medium mt-4 md:mt-0 mb-4">
+            Payment Detail
+          </h1>
+
+          <h2 class="text-black fs-5 fw-bold py-1 mt-5">
+            Thank you for your purchase.
+          </h2>
+          <h2 class="fw-normal fs-5 py-1">
+            Order <span class="text-primary fw-medium"> #1124909400</span>
+          </h2>
+
+          <div class="card w-100 bg-secondary-subtle border-0 p-3 mb-4">
+            <div class="row align-items-start">
+              <div class="col-2 d-flex justify-content-center p-0 ">
+                <div class="rounded-circle bg-white p-2 shadow-sm">
+                  <i class="fa-solid fa-envelope text-primary fs-4"></i>
+                </div>
+              </div>
+              <div class="col-10 px-1">
+                <h6 class="text-primary fw-medium mb-1">Email Instructions</h6>
+                <p class="text-black fs-6 fw-medium mb-0">
+                  Your account has purchased tickets. Details about your purchase will be sent to you instantly via
+                  email or,
+                  if you have already logged in, you can check your account.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="w-100 d-flex justify-content-center">
+            <button class="btn btn-primary d-flex gap-2 align-items-center">
+              Go to Homepage
+              <i class="fa-solid fa-arrow-right fs-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-tertiary text-center text-lg-start mt-5">
+    <div class="container p-4">
+      <div class="row">
+        <!-- Logo and Description -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <img src="./assets/logo.svg" alt="Wahana Travel" class="mb-3">
+          <p class="text-black mb-3">
+            Lorem ipsum dolor sit amet consectetur massa pellentesque ulamcorper pharetra diam. Nec urna diam aliquet.
+          </p>
+          <h6 class="fw-bold">MEDIA SOSIAL</h6>
+          <div class="d-flex gap-2 justify-content-center justify-content-lg-start align-items-center">
+            <a href="#" class="px-2 py-1 bg-primary rounded-circle">
+              <i class="fab fa-facebook fs-6 text-white"></i>
+            </a>
+            <a href="#" class="px-2 py-1 bg-primary rounded-circle">
+              <i class="fab fa-twitter fs-6 text-white"></i>
+            </a>
+            <a href="#" class="px-2 py-1 bg-primary rounded-circle">
+              <i class="fab fa-whatsapp fs-6 text-white"></i>
+            </a>
+            <a href="#" class="px-2 py-1 bg-primary rounded-circle">
+              <i class="fab fa-instagram fs-6 text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Address Section -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold text-primary mb-3">Address</h5>
+          <ul class="list-unstyled">
+            <li>Jl. Jembatan Tiga Blok N/4</li>
+            <li>RT.16 RW.8, Penjaringan</li>
+            <li>Jakarta Utara, 14440, Indonesia</li>
+          </ul>
+          <ul class="list-unstyled">
+            <li>Office: (021) 6660-1948</li>
+            <li>Mobile/WhatsApp: +62 857-7933-9878</li>
+            <li>Email: cs@wahanatravel.id</li>
+          </ul>
+          <ul class="list-unstyled">
+            <li>Hotline Tour: +62 811-1927-0079</li>
+            <li>Hotline Document: +62 811-1927-0053</li>
+            <li>Hotline Visa: +62 811-1927-0085</li>
+          </ul>
+        </div>
+
+        <!-- Other Services -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold text-primary mb-3">Other Services</h5>
+          <ul class="list-unstyled">
+            <li class="fw-medium text-black py-2"><i class="fas fa-plane text-primary"></i> Flight</li>
+            <li class="fw-medium text-black py-2"><i class="fas fa-bus text-primary"></i> Tour</li>
+            <li class="fw-medium text-black py-2"><i class="fas fa-car text-primary"></i> Car Rental</li>
+            <li class="fw-medium text-black py-2"><i class="fas fa-briefcase text-primary"></i> M.I.C.E</li>
+            <li class="fw-medium text-black py-2"><i class="fas fa-passport text-primary"></i> Visa</li>
+          </ul>
+        </div>
+
+        <!-- About Section -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="fw-bold text-danger mb-3">About</h5>
+          <ul class="list-unstyled">
+            <li class="py-2"><a href="#" class="text-decoration-none text-dark fw-medium">Promotion</a></li>
+            <li class="py-2"><a href="#" class="text-decoration-none text-dark fw-medium">Career</a></li>
+            <li class="py-2"><a href="#" class="text-decoration-none text-dark fw-medium">Terms & Conditions</a></li>
+            <li class="py-2"><a href="#" class="text-decoration-none text-dark fw-medium">Privacy Policy</a></li>
+            <li class="py-2"><a href="#" class="text-decoration-none text-dark fw-medium">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3 bg-primary text-white">
+      Copyright © 1999 - 2024 Wahana Travel. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Javascript -->
   <script type="module" src="./js/main.js"></script>
 </body>
 

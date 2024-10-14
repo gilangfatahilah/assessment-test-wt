@@ -1,14 +1,118 @@
-// Import all of Bootstrap's CSS
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
-$primary: #ff4136;
+$primary: #ca282c;
+$tertiary: #f5f7fc;
+$fs-base: 1rem;
 
 $theme-colors: map-merge(
   $theme-colors,
   (
     "primary": $primary,
+    "tertiary": $tertiary,
   )
 );
+
+$font-sizes: (
+  1: $fs-base * 2.5,
+  2: $fs-base * 2,
+  3: $fs-base * 1.75,
+  4: $fs-base * 1.5,
+  5: $fs-base * 1.25,
+  6: $fs-base * 1,
+  7: $fs-base * 0.75,
+  8: $fs-base * 0.5,
+);
+
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+
+@import "~bootstrap/scss/utilities/api";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    // Responsive width utilities
+    "width":
+      (
+        property: width,
+        class: w,
+        values: (
+          25: 25%,
+          50: 50%,
+          60: 60%,
+          65: 65%,
+          75: 75%,
+          100: 100%,
+        ),
+        responsive: true,
+      ),
+
+    // Responsive font-size utilities
+    "fs":
+      (
+        property: font-size,
+        class: fs,
+        values: $font-sizes,
+        responsive: true,
+      ),
+
+    // Responsive font-weight utilities
+    "fw":
+      (
+        property: font-weight,
+        class: fw,
+        values: (
+          lighter: 200,
+          light: 300,
+          normal: 400,
+          medium: 500,
+          semibold: 600,
+          bold: 700,
+          bolder: 800,
+        ),
+        responsive: true,
+      )
+  )
+);
+
+$text-classes: (
+  "primary",
+  "secondary",
+  "success",
+  "danger",
+  "warning",
+  "info",
+  "dark",
+  "black"
+);
+
+@each $name in $text-classes {
+  .text-#{$name} {
+    margin-bottom: 0 !important;
+  }
+}
+
+// custom classes
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.nav-link {
+  color: #000000 !important;
+}
+
+.font-cursive {
+  font-family: cursive !important;
+}
 
 @import "~bootstrap/scss/bootstrap";
